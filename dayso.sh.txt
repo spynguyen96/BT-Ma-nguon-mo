@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# THUC HIEN NHAP DAY SO N PHAN TU TU BAN PHIM
+# IN RA MAN HINH DAY VUA NHAP
+#-----------------------------------------------------------
+
+i=0
+echo "Nhap n: "
+read n
+
+sum=0
+
+# THUC HIEN NHAP DAY SO N PHAN TU TU BAN PHIM
+while [[ $i -le $n ]]
+do
+	echo -n "Nhap so thu $($i+1): "
+	read number
+	eval arr[$i]=$number
+
+	i=$(($i+1))
+	
+	#tinh tong
+	sum=$(( $sum+$number ))
+
+
+done
+
+#IN RA MAN HINH DAY VUA NHAP
+i=0
+while [[ $i -le $n ]]
+do
+	echo "arr[$i]= ${arr[$i]}"
+	i=$(($i+1))
+
+done
+echo "TONG LA $sum"
+#-----------------------------------------------------------
